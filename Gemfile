@@ -32,6 +32,9 @@ gem 'rails_admin'
 
 gem 'pg', '0.17.1'
 
+# Enables file uploads
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

@@ -23,6 +23,7 @@ class DatasetsController < ApplicationController
   # POST /datasets
   def create
     @dataset = Dataset.new(dataset_params)
+    # @dataset.dataset = params[:file]
 
     if @dataset.save
       redirect_to @dataset, notice: 'Dataset was successfully created.'
@@ -54,6 +55,6 @@ class DatasetsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def dataset_params
-    params.require(:dataset).permit(:title, :description, :createdate)
+    params.require(:dataset).permit(:title, :description, :createdate, {datasets: []})
   end
 end

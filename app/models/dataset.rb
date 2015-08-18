@@ -11,4 +11,5 @@
 #
 
 class Dataset < ActiveRecord::Base
+	mount_uploaders :datasets, DatasetUploader
 end

@@ -9,6 +9,9 @@
 %p
   %b Creation date:
   = @dataset.createdate
+%p
+  %b Datasets:
+  = @dataset.datasets[0]
 
 = link_to 'Edit', edit_dataset_path(@dataset)
 \|

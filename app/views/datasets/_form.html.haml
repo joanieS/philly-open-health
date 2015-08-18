@@ -19,6 +19,14 @@
       = f.label :createdate, class: "col-sm-2 control-label"
       .col-sm-9
         = f.date_select :createdate
+    .form-group
+      = f.label :datasets, class: "col-sm-2 control-label"
+      .col-sm-9
+        = f.file_field :datasets, multiple: true
+    .form-group
+      = f.label :remove_datasets, class: "col-sm-2 control-label"
+      .col-sm-9
+        = f.check_box :remove_datasets
 
     .actions.col-sm-offset-2.col-sm-9
       = f.submit 'Save', class: "btn btn-large btn-info"
